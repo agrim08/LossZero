@@ -21,7 +21,7 @@
 
 ### 📊 Advanced Visualization
 
-- **Chrono-Streak Heatmap**: A custom GitHub-style activity grid that flows from **left to right**, putting "Today" at the forefront.
+- **Chrono-Streak Heatmap**: A custom GitHub-style activity grid that flows from **left to right**.
 - **Data-Dense Dashboard**: Real-time metrics on your current streak, longest streak, and EOD (End of Day) AI summaries.
 - **Interactive Tech Stack**: Premium UI components with scanner effects, glassmorphism, and framer-motion animations.
 
