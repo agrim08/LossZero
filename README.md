@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LossZero
 
-## Getting Started
+<div align="center">
+  <img src="https://images.unsplash.com/photo-1620712943543-bcc4628c9757?q=80&w=1000&auto=format&fit=crop" width="200" height="200" alt="LossZero Logo" style="border-radius: 20px" />
+  <h1>MINIMIZE LOSS. MAXIMIZE LEARNING.</h1>
+  <p>An AI-powered progression tracker for serious Machine Learning practitioners.</p>
+</div>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 The Vision
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**LossZero** is not just another task tracker. It's a specialized intelligence system designed to keep you on the steep path of Machine Learning mastery. Built with a data-dense, minimalist aesthetic, it mirrors the intensity of the field it tracks.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Core Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧠 AI-Powered Intelligence
 
-## Learn More
+- **Automated Study Briefings**: Every time you mark a topic as complete, the system's **Gemini-Flash** integration generates a high-level technical summary (~300 words) tailored to your progress.
+- **Dynamic Hints**: The AI analyzes your completed work and suggests the optimal next objective, ensuring you stay within your zone of proximal development.
 
-To learn more about Next.js, take a look at the following resources:
+### 📊 Advanced Visualization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Chrono-Streak Heatmap**: A custom GitHub-style activity grid that flows from **left to right**, putting "Today" at the forefront.
+- **Data-Dense Dashboard**: Real-time metrics on your current streak, longest streak, and EOD (End of Day) AI summaries.
+- **Interactive Tech Stack**: Premium UI components with scanner effects, glassmorphism, and framer-motion animations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🛠 Flexible Curriculum
 
-## Deploy on Vercel
+- **Custom Modules**: Beyond any standard mastery path, you can deploy your own custom modules directly from the dashboard.
+- **Precise Control**: Mark topics as complete, delete irrelevant ones, and manage your learning pipeline with a single click.
+- **Expansive Notes**: A dedicated "Daily Notes" section with a "Memory Block" aesthetic and expandable technical insights.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Intelligence**: [Google Gemini API](https://ai.google.dev/)
+- **Database**: [MongoDB](https://www.mongodb.com/) via [Mongoose](https://mongoosejs.com/)
+- **Auth**: [Clerk](https://clerk.com/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- MongoDB instance (Atlas or local)
+- Clerk account for authentication
+- Gemini API Key
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/your-username/losszero.git
+   cd losszero
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory:
+
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   GEMINI_API_KEY=your_gemini_api_key
+   ```
+
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+## 📂 Project Structure
+
+- `/src/app`: Next.js App Router (Routes & Layouts)
+- `/src/components`: Reusable UI components (Heatmap, TopicCards, etc.)
+- `/src/lib`: Logic & Third-party integrations (Gemini, Streak logic, DB models)
+- `/src/api`: Backend API handlers
+
+## ⚖️ License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<div align="center">
+  <p><b>LossZero Intelligence Systems v1.2.0-stable</b></p>
+</div>
