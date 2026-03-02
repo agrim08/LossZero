@@ -41,22 +41,23 @@ export function AddTopicForm({ onAdd }: AddTopicFormProps) {
   };
 
   return (
-    <div className="mb-8">
+    <div className="">
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-full py-4 border-2 border-dashed border-zinc-800 rounded-xl text-zinc-500 hover:text-zinc-300 hover:border-zinc-700 hover:bg-zinc-900/50 transition-all flex items-center justify-center gap-2 group"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500/10 text-green-500 hover:bg-green-500/20 transition-all border border-green-500/20 group"
         >
-          <Plus className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          <span className="text-sm font-medium">Add Custom Module</span>
+          <Plus className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+          <span className="text-[11px] font-mono uppercase tracking-widest font-bold text-green-500">Add_Custom</span>
         </button>
       ) : (
         <motion.form
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           onSubmit={handleSubmit}
-          className="p-6 bg-[#0f0f0f] border border-zinc-800 rounded-xl space-y-4 shadow-2xl"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
         >
+          <div className="w-full max-w-md bg-[#0f0f0f] border border-zinc-800 rounded-2xl p-6 space-y-6 shadow-2xl relative">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-xs font-mono text-zinc-500 uppercase tracking-widest">New Objective</h3>
             <button
@@ -109,10 +110,11 @@ export function AddTopicForm({ onAdd }: AddTopicFormProps) {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full py-3 bg-zinc-200 hover:bg-white text-black rounded-lg text-sm font-bold transition-all disabled:opacity-50"
+              className="w-full py-3 bg-green-500 border border-green-600 hover:bg-green-400 text-black rounded-lg text-sm font-bold transition-all disabled:opacity-50"
             >
               {isPending ? "Adding..." : "Deploy Objective"}
             </button>
+          </div>
           </div>
         </motion.form>
       )}

@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Heatmap } from "@/components/Heatmap";
 import { StreakBadge } from "@/components/StreakBadge";
 import { TopicCard } from "@/components/TopicCard";
-import { Sparkles, Terminal } from "lucide-react";
+import { Sparkles, Terminal, Plus } from "lucide-react";
+import { AddTopicForm } from "@/components/AddTopicForm";
 import { motion } from "framer-motion";
 import { formatDistanceToNow } from "date-fns";
 
@@ -60,6 +61,10 @@ export default function DashboardPage() {
     if (res.ok) {
       setTopics(prev => prev.filter(t => t._id !== id));
     }
+  };
+
+  const handleAddTopic = (newTopic: any) => {
+    setTopics(prev => [newTopic, ...prev]);
   };
 
   const todayTopics = topics.filter(t => !t.completed).slice(0, 3);
@@ -146,8 +151,11 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Completion Panel */}
-      <section className="space-y-4">
-        <h3 className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Incoming Objectives</h3>
+      <section className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Incoming Objectives</h3>
+          <AddTopicForm onAdd={handleAddTopic} />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {todayTopics.length > 0 ? (
             todayTopics.map((topic: any) => (
