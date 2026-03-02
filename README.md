@@ -1,7 +1,7 @@
 # LossZero
 
 <div align="center">
-  <img src="public/Screenshot 2026-03-03 022350.png" width="200" height="200" alt="LossZero Logo" style="border-radius: 20px" />
+  <img src="public/Screenshot 2026-03-03 022350.png" width="600" height="400" alt="LossZero Logo" style="border-radius: 20px" />
   <h1>MINIMIZE LOSS. MAXIMIZE LEARNING.</h1>
   <p>An AI-powered progression tracker for serious Machine Learning practitioners.</p>
 </div>
